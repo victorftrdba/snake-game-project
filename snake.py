@@ -1,6 +1,7 @@
 import pygame
 import random
 from pygame.locals import *
+import constant
 
 
 def on_grid_random():
@@ -14,13 +15,13 @@ def collision(c1, c2):
 
 
 pygame.init()
-screen = pygame.display.set_mode((640, 480))
-pygame.display.set_caption("Snake")
+screen = pygame.display.set_mode((constant.GAME_WIDTH, constant.GAME_HEIGHT))
+pygame.display.set_caption(constant.GAME_TITLE)
 font = pygame.font.Font(None, 50)
 
 snake = [(200, 200), (210, 200), (220, 200)]
 snake_skin = pygame.Surface((10, 10))
-snake_skin.fill((255, 255, 255))
+snake_skin.fill((0, 200, 0))
 
 apple_pos = on_grid_random()
 apple = pygame.Surface((10, 10))
@@ -31,7 +32,7 @@ my_direction = K_LEFT
 clock = pygame.time.Clock()
 
 while True:
-    clock.tick(20)
+    clock.tick(constant.GAME_FPS)
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -70,8 +71,8 @@ while True:
 
     for pos in snake:
         screen.blit(snake_skin, pos)
-        if pos[0] < 0 or pos[0] > 640 or pos[1] < 0 or pos[1] > 480:
-            gameOverMessage = font.render("Game Over", True, (255, 255, 255))
-            screen.blit(gameOverMessage, screen.get_rect().center)
+        if pos[0] < 0 or pos[0] > constant.GAME_WIDTH or pos[1] < 0 or pos[1] > constant.GAME_HEIGHT:
+            print(constant.GAME_OVER_MESSAGE)
+            pygame.quit()
 
     pygame.display.update()
