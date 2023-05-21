@@ -1,7 +1,7 @@
 # Snake Game em Python
 
 ## Descrição
-Este projeto é uma implementação do famoso jogo "Snake" em Python. O objetivo é controlar uma cobra que se movimenta em um campo delimitado, com o objetivo de comer a comida e crescer. O jogo termina quando a cobra colide com as paredes ou com o próprio corpo.
+Este projeto é uma implementação do famoso jogo "Snake" em Python. O objetivo é controlar uma cobra que se movimenta em um campo delimitado, com o objetivo de comer a comida e crescer. O jogo termina quando a cobra colide com as paredes.
 
 ## Pré-requisitos
 Antes de executar o jogo, certifique-se de ter os seguintes requisitos instalados em seu ambiente:
