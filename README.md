@@ -11,8 +11,8 @@ Antes de executar o jogo, certifique-se de ter os seguintes requisitos instalado
 ## Instalação
 Siga as etapas abaixo para configurar e executar o projeto:
 
-Instale a biblioteca pygame: <br/>
-pip install pygame
+Instale as dependências do projeto: <br/>
+pip install -r requirements.txt
 
 ## Execução
 
